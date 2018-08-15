@@ -1,0 +1,12 @@
+---
+  - hosts: vpn
+    gather_facts: true
+    tasks:
+      - name: Add VPN client configuration
+        include_role:
+          name: ansible-openvpn
+          tasks_from: client_keys
+        vars:
+          clients: ["{{ OPENVPN_CLIENTS }}"]
+          openvpn_port: "{{ OPENVPN_PORT|default(1194) }}"
+          

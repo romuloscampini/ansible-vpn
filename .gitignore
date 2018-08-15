@@ -1,0 +1,12 @@
+*.iml
+.idea
+.vscode
+.code
+*.retry
+*.swp
+*.env
+*.key
+*.csr
+*.crt
+*.ovpn
+.vagrant
