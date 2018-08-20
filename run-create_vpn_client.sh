@@ -11,10 +11,10 @@ else
         echo "OPENVPN_PORT não especificada."
         echo "Usando OPENVPN_PORT default -> 1194"
         echo "..."
-        ansible-playbook -i prod-inventory -vv --ask-sudo-pass --extra-vars="OPENVPN_CLIENTS=$OPENVPN_CLIENT" "$@" openvpn-client.yml
+        ansible-playbook -i prod-inventory -vv --ask-sudo-pass --extra-vars="OPENVPN_CLIENTS=$OPENVPN_CLIENT" openvpn-client.yml
     else
         echo "Usando OPENVPN_PORT: $OPENVPN_PORT"
         echo "..."
-        ansible-playbook -i prod-inventory -vv --ask-sudo-pass --extra-vars="OPENVPN_CLIENTS=$OPENVPN_CLIENT OPENVPN_PORT=$OPENVPN_PORT" "$@" openvpn-client.yml
+        ansible-playbook -i prod-inventory -vv --ask-sudo-pass --extra-vars="OPENVPN_CLIENTS=$OPENVPN_CLIENT OPENVPN_PORT=$OPENVPN_PORT" openvpn-client.yml
     fi
 fi
