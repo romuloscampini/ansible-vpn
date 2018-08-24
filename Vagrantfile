@@ -31,6 +31,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
    ansible.groups = {
      "vpn" => [ "vagrant" ]
    }
+   ansible.extra_vars = {
+    OPENVPN_CLIENTS: "['Client1','Client1']"
+   }
    ansible.raw_ssh_args = ['-o ControlMaster=auto']
    ansible.verbose = "vv"
  end

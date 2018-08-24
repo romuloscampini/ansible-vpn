@@ -7,6 +7,6 @@
           name: ansible-openvpn
           tasks_from: client_keys
         vars:
-          clients: ["{{ OPENVPN_CLIENTS }}"]
+          clients: "{{ OPENVPN_CLIENTS }}"
           openvpn_port: "{{ OPENVPN_PORT|default(1194) }}"
           

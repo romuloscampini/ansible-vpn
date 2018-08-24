@@ -2,4 +2,7 @@
   - hosts: vpn
     gather_facts: true
     roles:
-      - { role: ansible-openvpn, clients: ["{{ OPENVPN_CLIENTS }}"], openvpn_port: "{{ OPENVPN_PORT|default(1194) }}", sudo: yes}
+      - { role: ansible-openvpn, 
+          clients: "{{ OPENVPN_CLIENTS }}", 
+          openvpn_port: "{{ OPENVPN_PORT|default(1194) }}", 
+          sudo: yes }
