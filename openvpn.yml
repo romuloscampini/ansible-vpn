@@ -4,5 +4,6 @@
     roles:
       - { role: ansible-openvpn, 
           clients: "{{ OPENVPN_CLIENTS }}", 
-          openvpn_port: "{{ OPENVPN_PORT|default(1194) }}", 
+          openvpn_port: "{{ OPENVPN_PORT|default(1194) }}",
+          openvpn_dualstack: false,
           sudo: yes }
