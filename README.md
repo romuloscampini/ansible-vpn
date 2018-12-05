@@ -12,7 +12,7 @@ Ansible Project for Install OpenVPN Server and create client configuration
 1. Clone this repo
 2. Initialize sub-modules:
     * Inside dir of cloned repo, run:
-        `git submodules update --init`
+        `git submodule update --init`
 3. Specifiy server on `prod-inventory` file
 4. Run install script
     * Full Installation (Server + Client)  
