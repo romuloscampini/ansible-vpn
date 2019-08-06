@@ -1,0 +1,2 @@
+[vpn]
+server ansible_ssh_host=<SERVER_HOST> ansible_ssh_user=<USERNAME>
